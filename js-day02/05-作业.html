@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05-作业</title>
+    <script>
+        //1.判断时间阶段。 比如用户输入12点弹出中午好用户输入18点弹出傍晚好用户输入23点弹出深夜好
+        // 5-10点为早上，10-12为中午，12-16为下午，17-21为傍晚，21-24为深夜
+        /*  var time = prompt("请输入1-24时间点：");
+         if (time >= 5 && time <= 10) {
+             alert("早上好");
+         } else if (time <= 12) {
+             alert("中午好");
+         } else if (time <= 16) {
+             alert("下午好");
+         } else if (time <= 21) {
+             alert("傍晚好");
+         } else {
+             alert("深夜好");
+         } */
+
+        //2. 比较两个数的最大值( 用户依次输入2个值,最后弹出最大的那个值)——三元表达式，比较三个数大小也是类似做法
+        /*  var num1 = prompt("请输入第一个数：");
+         var num2 = prompt("请输入第二个数：");
+         var max = parseFloat(num1) > parseFloat(num2) ? num1 : num2;
+         alert(max + "该值最大"); */
+        //三元表达式比大小没有隐式转换，需要我们强制转换
+
+        //3. 用户输入一个数,来判断是奇数还是偶数
+        /* var num = prompt("请输入一个大于0的整数：");
+        if (num % 2 == 0) {
+            alert("该数是偶数");
+        } else {
+            alert("该数是奇数");
+        }
+ */
+        //4.根据用户输入的数值(数字1到数字7 ) ,返回星期几——switch
+        /* var week = prompt("请输入数字1到数字7：");
+        switch (parseInt(week)) {
+            case 1:
+                alert("星期一");
+                break;
+            case 2:
+                alert("星期二");
+                break;
+            case 3:
+                alert("星期三");
+                break;
+            case 4:
+                alert("星期四");
+                break;
+            case 5:
+                alert("星期无");
+                break;
+            case 6:
+                alert("星期六");
+                break;
+            case 7:
+                alert("星期日");
+                break;
+            default:
+                alert("输入错误");
+        } */
+        //默认输入数据类型为字符型，注意转换
+
+        //5. 接收班长口袋里的钱数?若大于等于2000 ,请大家吃西餐。若小于2000 ,大于等于1500 ,请大家吃快餐。若小于1500 ,大于等于1000 ,请大家喝饮料。若小于1000 ,大于等于500 ,请大家吃棒棒糖。否则提醒班长下次把钱带够
+        var money = prompt("请输入班长口袋里有多少钱：");
+        if (money >= 2000) {
+            alert("请大家吃西餐");
+        } else if (money >= 1500) {
+            alert("请大家吃快餐");
+        } else if (money >= 1000) {
+            alert("请大家喝饮料");
+        } else if (money >= 500) {
+            alert("请大家吃棒棒糖");
+        } else {
+            alert("下次把钱带够");
+        }
+
+        //6. 分数转换給一个分数 ,判定等级。大于等于90 A,大于等于80小于90 B,大于等于70小于80 C ,大于等于60小于70D ,小于60E
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

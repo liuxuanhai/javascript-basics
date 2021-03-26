@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06-Date日期对象</title>
+    <script>
+        //无参数情况
+        var now = new Date();//Date()是一个构造函数，必须实例化后才能使用
+        console.log(now);
+        //参数常用写法。数字型：2019,11,3 或字符串型'2020-1-23 8:34:20'
+        var date1 = new Date(2019, 11, 3);//返回12月不是11月，坑！
+        console.log(date1);
+        var date2 = new Date('2020-1-23 8:34:20');
+        console.log(date2);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17-利用对象字面量创建对象</title>
+    <script>
+        //创建了一个空的对象
+        // var obj={};
+        var obj = {
+            name: '张三丰',
+            sex: '男',
+            age: 18,
+            sayHi: function () {
+                console.log('Hi');
+            }
+        }
+        console.log(obj.name);
+        console.log(obj['sex']);
+        obj.sayHi();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

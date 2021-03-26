@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-获取数组元素索引方法</title>
+    <script>
+        //1.indexOf()返回第一个满足条件的索引号，从前往后查找
+        var arr = ['red', 'blue', 'green', 'pink', 'green'];
+        console.log(arr.indexOf('green'));
+        //找不到返回-1
+        console.log(arr.indexOf('gray'));
+
+        // 2.lastIndexOf()返回最后一个满足条件的索引号，从后往前查找
+        console.log(arr.lastIndexOf('green'));
+        //同样找不到返回-1
+        console.log(arr.lastIndexOf('gray'));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

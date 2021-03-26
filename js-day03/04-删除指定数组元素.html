@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-删除指定数组元素</title>
+    <script>
+        // 要求:将数组[2,0,6, 1, 77, 0, 52, 0, 25, 7]中的0去掉后,形成一个不包含0的新数组。
+        var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        //方法1：在原数组上修改
+        /* for (var i = 0; i < arr.length; i++) {
+            if (arr[i] == 0) {
+                for (var j = i; j < arr.length; j++) {
+                    arr[j] = arr[j + 1];
+                }
+                arr.length--;
+            }
+        } */
+        //方法2：新建一个数组，存放不为0的数组元素
+        var newArr = []
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                newArr[newArr.length] = arr[i];
+            }
+        }
+        console.log(arr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

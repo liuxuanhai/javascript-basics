@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12-转换为数字型</title>
+    <script>
+        // var age = prompt('请输入你的年龄');
+        // 1.parseInt(变量)，将字符型转换为数字型，且为整数
+        // console.log(parseInt(age));
+        console.log(parseInt('3.14'));// 3取整
+        console.log(parseInt('3.94'));//3取整，而非四舍五入
+        console.log(parseInt('120px'));//120，数字开头，可自动去除数字后面的字符，后续可用此去除px等单位
+        console.log(parseInt('120ss'));//120
+        console.log(parseInt('ww233ds'));//NaN，字符开头直接pass
+        // 2.parseFloat(变量)，将字符型转换为数字型，且为小数/浮点数
+        console.log(parseFloat('3.14'));// 3.14 
+        console.log(parseFloat('3.94'));//3.94
+        console.log(parseFloat('120px'));//120
+        console.log(parseFloat('120ss'));//120
+        console.log(parseFloat('ww233ds'));//NaN
+        // 3.Number(变量)
+        console.log(Number('12'));//12
+        // 4.算数运算符- \ * 减除乘这三种，隐式转换
+        console.log('123' - 0);//123
+        console.log('123' - '120');//3
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09-数据类型简介</title>
+    <script>
+        // 1.数字型
+        // 1.1数字型范围
+        // 最大值
+        console.log(Number.MAX_VALUE);
+        // 最小值
+        console.log(Number.MIN_VALUE);
+        // 1.2数字型三个特殊值
+        // 无穷大
+        console.log(Infinity);
+        //无穷小，高数中负无穷大并非无穷小，此处例外
+        console.log(-Infinity);
+        // 2.字符型
+        var str = '我是"高富帅"程序员';
+        var str1 = "我是'高富帅'\n程序员";
+        console.log(str, str1);
+        console.log(str.length);
+        // 3.布尔型
+        console.log(true + 1);
+        // 4.1 undefined 声明变量却未赋值即为undefined
+        var variable;
+        console.log(variable);
+        console.log('你好' + variable);//字符与任意相接仍为字符
+        console.log(11 + variable);//undefined与数字相加为NaN
+        // 4.2Null 空值
+        var space = null;
+        console.log(space + '你好');//字符与任意相接仍为字符
+        console.log(space + 1);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

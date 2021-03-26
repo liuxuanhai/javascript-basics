@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06-冒泡排序</title>
+    <script>
+        var arr = [3, 2, 4, 1, 5];
+        var temp;
+        //外层循环决定趟数,从小到大排序，每一趟摆好该趟的最大元素位置
+        for (var i = 0; i < arr.length - 1; i++) {
+            //内存循环进行比较
+            for (var j = 0; j < arr.length - i - 1; j++) {
+                //如果索引号小的数大于索引号大的数，则互换位置,前一个与后一个比较
+                if (arr[j] > arr[j + 1]) {
+                    temp = arr[j + 1];
+                    arr[j + 1] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        console.log(arr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

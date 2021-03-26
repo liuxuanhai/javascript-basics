@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21-作业</title>
+    <script>
+        // 1.创建一个电脑对象,该对象要有颜色、重量品牌、型号,可以看电影、听音乐打游戏和敲代码。
+        var computer = {
+            color: 'black',
+            weight: '800g',
+            type: 'E470',
+            watchMovie: function () {
+                console.log('我在看电影');
+            },
+            listenMusic: function () {
+                console.log('我在听音乐');
+            },
+            playGame: function () {
+                console.log('我在打游戏');
+            },
+            work: function () {
+                console.log('我在敲代码');
+            }
+        }
+        for (var k in computer) {
+            console.log(computer[k]);
+        }
+        // 2.创建一个按钮对象,该对象中需要包含宽,高,背景颜色和点击行为。
+        var btn = new Object();
+        btn.width = '400px';
+        btn.height = '300px';
+        btn.backgroundcolor = 'red';
+        btn.click = function () {
+            console.log('点击');
+        }
+        for (var k in btn) {
+            console.log(btn[k]);
+        }
+
+        // 3.创建一个车的对象,该对象要有重量颜色、牌子,可以载人、拉货和耕田。
+        var car = {
+            weight: '700kg',
+            color: 'white',
+            type: '宝马',
+            zairen: function () {
+                console.log('可以载人');
+            },
+            lahuo: function () {
+                console.log('可以拉货');
+            },
+            gengtian: function () {
+                console.log('可以耕田');
+            }
+
+        }
+        for (var k in car) {
+            console.log(car[k]);
+        }
+        //4.判断输出结果
+        var num = 1;
+        function demo() {
+            console.log(num);
+            function demoSon() {
+                console.log(num);
+                num = 3;
+                console.log(num);
+            }
+            var num = 2
+            demoSon();
+        }
+        demo();
+        //相当于执行以下代码：
+        /*  var num;
+         function demo() {
+             var num;
+             function demoSon() {
+                 console.log(num);
+                 num = 3;
+                 console.log(num);
+             }
+             console.log(num);
+             num = 2;
+             demoSon();
+         }
+         num = 1;
+         demo(); */
+
+        // 5. 有以下有两个数组，一个数组arr是班级里所有的学员的名称，一个数组currentArr是提交了每日反馈的学员名单，请创建一种算法，把未提交每日反馈的学员筛选出来
+        var arr = ["张瑞淑", "徐海涛", "谢岗岗", "薛鹏", "魏明杨", "党婷", "熊飞", "郑翠翠", "李航卫", '张大大', "屈涛", "汪孝双", "代攀飞", "武志钰"];
+        var currentArr = ["张瑞淑", "徐海涛", "谢岗岗", "魏明杨", "党婷", "熊飞", "郑翠翠"];
+        var newArr = [];
+        for (var i = 0; i < arr.length; i++) {
+            for (var j = 0; j < currentArr.length; j++) {
+                if (arr[i] == currentArr[j]) {
+                    break;//匹配到了就跳出该层循环，开始外层循环的下一个
+                } else if (j == currentArr.length - 1) {
+                    newArr[newArr.length] = arr[i];//如果j一层都没匹配到，就放入新数组内
+                }
+            }
+        }
+        console.log(newArr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

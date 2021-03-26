@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08-格式化日期时分秒</title>
+    <script>
+        var now = new Date();
+        console.log(now.getHours());
+        console.log(now.getMinutes());
+        console.log(now.getSeconds());
+        //要求封装一个函数返回当前的时分秒 11:11:02
+        function getTimes() {
+            var time = new Date();
+            var h = time.getHours();//时
+            h = h < 10 ? '0' + h : h;//使用三元表达式补零
+            var m = time.getMinutes();//分
+            m = m < 10 ? '0' + m : m;
+            var s = time.getSeconds();//秒
+            s = s < 10 ? '0' + s : s;
+            return h + ':' + m + ':' + s;
+        }
+        console.log(getTime());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

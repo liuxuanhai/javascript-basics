@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08-函数模拟简单计算器</title>
+    <script>
+        var num1 = parseFloat(prompt('请输入第一个数：'));
+        var num2 = parseFloat(prompt('请输入第二个数：'));
+        var op = prompt('请输入操作符：\n1.加法运算+\n2.减法运算-\n3.乘法运算x\n4.除法运算÷');
+        // 让用户选择操作符比让用户输入操作符更好：1.用户输入更简单2.操作符乘可能输入为x（小写X）或×或*，具有多样性，使用选择一定程度上进行了规范
+        function getResult(n, m, operation) {
+            var result;
+            switch (operation) {
+                case '1':
+                    result = n + m;
+                    break;
+                case '2':
+                    result = n - m;
+                    break;
+                case '3':
+                    result = n * m;
+                    break;
+                case '4':
+                    result = n / m;
+                    break;
+                default:
+                    result = '输入错误';
+            }
+            return result;
+        }
+        var res = getResult(num1, num2, op);
+        alert(res);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-Math对象随机数方法</title>
+    <script>
+        //得到一个两数之间的随机整数，包括两个数在内
+        function getRandomIntInclusive(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+            // 先是[0,max+1),再是[min,max+1),最后向下取整[min,max]里的整数
+        }
+        console.log(getRandomIntInclusive(1, 10));
+        //随机点名
+        var arr = ['张三', '张三丰', '王武', '李思', '徐三'];
+        console.log(arr[getRandomIntInclusive(0, arr.length - 1)]);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

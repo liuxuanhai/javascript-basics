@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05-猜数字游戏</title>
+    <script>
+        function getRandomIntInclusive(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+            // 先是[0,max+1),再是[min,max+1),最后向下取整[min,max]里的整数
+        }
+        var ran = getRandomIntInclusive(1, 10);
+        var n = 0;
+        while (n < 10) {
+            var num = parseInt(prompt('请输入1-10之间的整数：'));
+            if (num > ran) {
+                n++;
+                alert('猜大了,还剩' + (10 - n) + '次机会');
+            } else if (num < ran) {
+                n++;
+                alert('猜小了,还剩' + (10 - n) + '次机会');
+            } else {
+                alert('猜对了');
+                break;//猜对退出整个循环
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

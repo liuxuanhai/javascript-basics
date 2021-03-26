@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22-求字符串中出现次数最多的字符及次数</title>
+    <script>
+        // 判断一个字符串'abcoefoxyozzopp'中出现次数最多的字符,并统计其次数。
+        //①核心算法:利用charAt()遍历这个字符串
+        //②把每个字符都存储给对象，如果对象没有该属性,就为1 ,如果存在了就+1
+        //③遍历对象,得到最大值和该字符
+        var str = 'abcoefoxyozzopp';
+        var o = {};
+
+
+        for (var i = 0; i < str.length; i++) {
+            var chars = str.charAt(i);
+            if (o[chars]) {
+                o[chars]++;
+            } else {
+                o[chars] = 1;
+            }
+        }
+        console.log(o);
+        //遍历对象得到最大值及字符
+        var max = 0;
+        var ch = '';
+        for (var k in o) {
+            //k得到的是属性名
+            //o[k]得到的是属性值
+            if (o[k] > max) {
+                max = o[k];
+                ch = k;
+            }
+        }
+        console.log('出现最多的字符是：' + ch + ' 出现次数：' + max);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

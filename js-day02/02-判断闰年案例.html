@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-判断闰年案例</title>
+    <script>
+        var year = prompt("请输入年份：");
+        // 运算符会自动将字符型转换为数字型，不用进行转换
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            alert(year + "年是闰年");
+        }
+        else {
+            alert(year + "年是平年");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

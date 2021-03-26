@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05-翻转数组</title>
+    <script>
+        /*  ①将前半数组元素与后半数组元素交换位置，如第一个元素与最后一个元素交换位置
+         ②控制这个前半，即交换的元素所在索引号须小于数组的长度 */
+        var arr = ['red', 'green', 'blue', 'pink', 'purple'];
+
+        for (var i = 0; i < arr.length / 2; i++) {
+            //第一个元素与最后一个元素交换位置，注意最后一个元素的索引号
+            var temp;
+            temp = arr[i];
+            arr[i] = arr[arr.length - i - 1];
+            arr[arr.length - i - 1] = temp;
+        }
+        console.log(arr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

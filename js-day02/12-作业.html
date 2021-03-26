@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.求1-100之间所有数的总和与平均值
+        // var i = 1, sum = 0, avg = 0;
+        /*  while (i <= 100) {
+             sum += i;
+             i++;
+         }
+         avg = sum / 100
+         console.log('1-100之间所有数的总和：' + sum);
+         console.log('1-100之间所有数的平均值：' + avg); */
+
+        // 2.求1-100之间所有偶数的和
+        /* while (i <= 100) {
+            if (i % 2 == 0) {
+                sum += i
+            }
+            i++;
+        }
+        console.log('1-100之间所有偶数的和：' + sum); */
+        // 3.求100以内7的倍数的总和
+        /* while (i <= 100) {
+            if (i % 7 == 0) {
+                sum += i;
+            }
+            i++;
+        }
+        console.log('1-100之间所有7的倍数的总和：' + sum);
+        */
+
+        // 4.使用for循环打印矩形，要求每次只能输出一个★
+
+        // 5.使用for循环打印三角形
+        /* var str = '';
+        for (var i = 1; i <= 5; i++) {
+            for (var j = 1; j <= i; j++) {
+                str += '★';
+            }
+            str += '\n';
+        }
+        console.log(str); */
+
+        // 6.接收用户输入的用户名和密码,若用户名为"admin" ,密码为"123456" , 则提示用户登录成功!否则,让用户一直输入。
+        /* var usrName = prompt('请输入用户名：');
+        var psw = prompt('请输入密码：');
+        while (!(usrName == 'admin' && psw == '123456')) {
+            usrName = prompt('请输入用户名：');
+            psw = prompt('请输入密码：');
+        }
+        alert('登录成功'); */
+
+        // 7.求整数1 ~ 100的累加值,但要求跳过所有个位为3的数[用continue实现]。
+        /* var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 10 == 3) {
+                continue;
+            }
+            sum += i;
+        }
+        console.log(sum); */
+
+        var money = 100, temp = 0;
+        var num = prompt('请输入您需要的操作：\n1.存钱\n2.取钱\n3.显示余额\n4.退出');
+        while (num != 4) {
+            switch (num) {
+                case '1':
+                    temp = prompt('请输入您存钱数：')
+                    money += parseFloat(temp);//注意转换数字类型
+                    alert('您的余额：' + money);
+                    break;
+                case '2':
+                    temp = prompt('请输入您取钱数：')
+                    money -= parseFloat(temp);
+                    alert('您的余额：' + money);
+                    break;
+                case '3':
+                    alert('您的余额：' + money);
+                    break;
+                case '4':
+                    alert('您已退出');
+                    break;
+                default:
+                    alert('输入错误');
+            }
+            num = prompt('请输入您需要的操作：\n1.存钱\n2.取钱\n3.显示余额\n4.退出');
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
